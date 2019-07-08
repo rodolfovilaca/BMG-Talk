@@ -1,0 +1,23 @@
+// Child Component
+import React from 'react';
+import { animated } from 'react-spring';
+import PropTypes from 'prop-types';
+import ScaleAnimation from '../../shared/animations/ScaleAnimation';
+import './style.scss';
+
+const AnimatedBadge = ({ value }) =>
+    value ? (
+        <ScaleAnimation>
+            {props => (
+                <animated.span className="badge" style={props}>
+                    {value}
+                </animated.span>
+            )}
+        </ScaleAnimation>
+    ) : null;
+
+AnimatedBadge.propTypes = {
+    value: PropTypes.number.isRequired,
+};
+
+export default AnimatedBadge;

@@ -1,0 +1,22 @@
+import React, { useState } from "react";
+
+function square(props) {
+    const { player, setPlayer } = props;
+    const [value, setValue] = useState(null);
+    const onClick = () => {
+        setValue(player);
+        setPlayer(prevState => (prevState === "x" ? "o" : "x"));
+    };
+
+    return (
+        <button className="square" onClick={onClick}>
+        {value}
+        </button>
+    );
+}
+
+export default square;
+
+// USAGE
+
+<Square player='x' />

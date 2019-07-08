@@ -5,7 +5,11 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "spectacle-scripts": "2.4.0"
+    "react-spring": "^8.0.23",
+    "react-three-fiber": "^2.2.4",
+    "spectacle-code-slide": "^0.5.2",
+    "spectacle-scripts": "2.4.0",
+    "three": "^0.105.2"
   },
   "scripts": {
     "start": "react-scripts start",

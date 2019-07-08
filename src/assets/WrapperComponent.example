@@ -1,0 +1,14 @@
+// Wrapper Component
+import { useSpring } from 'react-spring';
+
+const ScaleAnimation = ({ children }) => {
+    const spring = useSpring({
+        to: [{ transform: 'scale(1.5)' }, { transform: 'scale(1)' }],
+        from: { transform: 'scale(1)' },
+        config: { tension: 125, friction: 10, mass: 1, duration: 100 },
+    });
+
+    return children(spring);
+};
+
+export default ScaleAnimation;

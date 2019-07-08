@@ -1,0 +1,21 @@
+import React, { useState } from 'react';
+
+export default () => {
+    const [counter, setCounter] = useState(0);
+
+    const increment = () => {
+        setCounter(prevState => prevState + 1)
+    }
+
+    const decrement = () => {
+        setCounter(prevState => prevState === 1 ? prevState : prevState - 1)
+    }
+
+    return (
+        <>
+            <button onClick={increment}>+</button>
+            <span>{ counter }</span>
+            <button onClick={decrement}>-</button>
+        </>
+    )
+}

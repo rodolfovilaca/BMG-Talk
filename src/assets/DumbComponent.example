@@ -1,0 +1,6 @@
+import React from 'react';
+
+function DumbList(props) {
+    const { list } = props;
+    return list.map((item, index) => <li key={`item-${index}`}>{item.description}</li>)
+}
